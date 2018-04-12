@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Building a (React) Component Library - Leonardo Faria</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/github.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Building a (React) Component Library</h1>
+          <h3 class="primary">Leonardo Faria</h3>
+        </section>
+
+        <section>
+          <h1>Leonardo</h1>
+
+          <ul>
+            <li>Lead Software Developer @ Thinkific</li>
+            <li><a href="http://bit.ly/2HoOzgi">www.leonardofaria.net</a></li>
+						<li><a href="http://bit.ly/2F7OXik">@leozera on Twitter</a></li>
+            <li><a href="http://bit.ly/2Hp6t2k">leonardofaria on Github</a></li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Why?</h1>
+
+					<ul>
+            <li>Collaboration between Designers and Devs</li>
+            <li>Consistency between codebases/products</li>
+						<li>Complexity isolated</li>
+          </ul>
+				</section>
+				
+				<section>
+          <h1>Inspiration?</h1>
+
+					<a href="https://adele.uxpin.com">adele.uxpin.com</a>
+        </section>
+
+				<section>
+          <img src="img/bear.gif">
+        </section>
+
+        <section>
+          <h1>How?</h1>
+
+					<ul>
+						<li>How to show?</li>
+						<li>How to improve?</li>
+					</ul>
+        </section>
+
+				<section>
+          <h1>How to show?</h1>
+
+					<ul>
+						<li>
+							Storybook
+								<ul>
+									<li>Angular</li>
+									<li>React</li>
+									<li>Vue</li>
+								</ul>
+						</li>
+					</ul>
+				</section>
+				
+				<section>
+          <h1>Storybook</h1>
+
+					<ul>
+						<li>Knobs</li>
+						<li>Netlify integration</li>
+					</ul>
+        </section>
+
+				<section>
+					<video controls autoplay>
+				    <source src="img/knobs.mov" type="video/mov">
+				    <source src="img/knobs.mp4" type="video/mp4">
+					</video>
+        </section>
+
+				<section>
+          <img src="img/netlify.png">
+				</section>
+				
+				<section>
+          <h1>How to improve?</h1>
+
+					<ul>
+						<li><a href="https://nodesecurity.io/">Node Security Platform</a></li>
+						<li><a href="https://help.github.com/articles/about-security-alerts-for-vulnerable-dependencies/">Github security alerts</a></li>
+						<li><a href="https://greenkeeper.io/">Greenkeeper</a> / <a href="https://www.dependencies.io/">dependencies.io</a></li>
+					</ul>
+        </section>
+
+				<section>
+          <img src="img/nodesecurity-fail.png" /><br />
+					<img src="img/nodesecurity-success.png" />
+        </section>
+
+				<section>
+          <img src="img/github-alerts.gif" />
+        </section>
+
+				<section>
+          <img src="img/dependencies.io.png" />
+        </section>
+
+				<section>
+          <h1>That's all folks!</h1>
+
+					<ul>
+						<li><a href="https://bit.ly/2FawDFv">Full post: https://bit.ly/2FawDFv</a></li>
+						<li><a href="http://bit.ly/2HkXOxY">Github repo: http://bit.ly/2HkXOxY</a></li>
+						<li>Questions?</li>
+					</ul>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        history: true,
+        progress: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>

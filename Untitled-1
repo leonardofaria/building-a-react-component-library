@@ -1,0 +1,89 @@
+# 1
+
+Thanks for coming. I work as lead software developer at Thinkific. If you don't know what is Thinkific, Thinkific is a course platform and people can share their knownlodge online without webdevelopment skills. We know they are already experts in a particular area and we want them to have the best experience selling online courses. Imagine a Shopify for education.
+My website, twitter and github are there if you wanna follow me or whatever.
+
+# 2
+
+At certain point in your company you need to create a component library.
+There are many reasons for doing that. We want Collaboration between Designers and Devs. Sometimes is difficult to find a source of truth. We want consistency between codebases/products. There is no reason for recreating styling in different projects. We want Complexity isolated. CSS is awesome but sometimes we face a feel problems trying to get pixel perfection.
+
+# 3 
+
+When you look around, you see lots of examples. Adele is a repository that shows dozens of libraries, such as Solid (from Buzzfeed - https://solid.buzzfeed.com/) or Polaris (from Shopify - https://polaris.shopify.com/)
+
+# 3
+
+So, component libraries sound cool but how to get this?
+
+# 4
+
+There are too many hows. And there are too many answers. I want to share a few thoughts on how we are creating our component library.
+
+# 5
+
+First thing to think is styling. We have lots of styling in Sass so it doesn't sound right migrate to style components. Out of curiosity, let's do a quick poll - Raise your hands if you are using styled-components. Now, raise your hands if you are using Sass. Now, I don't know who won, can we create an app for voting?
+
+# 6
+
+Second thing to think is how to show the elements that we are working? One of most popular choices is storybook.
+
+There was a meetup here a couple months ago about Storybook. If you were not here a while ago, Storybook is a development environment for UI components. You can browse and see how a component looks in the browser.
+
+There are two tips that I want to talk about tonight.
+
+# 7
+
+The first one is looking the Storybook website and learn more about addons. There is an addon called knobs which allows you to interact with your component props, like the video shows.
+
+*SHOW STORYBOOK: http://localhost:9002/?knob-greaterThanEquals=&knob-lessThanEquals=&knob-Icon=ellipsis-h&knob-Has%20Focus=false&knob-name=thinkName&knob-placeholder=A%20basic%20input&knob-type=text&knob-initValue=My%20input&selectedKind=Input&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs*
+
+# 8
+
+The second tip I want to talk about is using Netlify to host your storybook. Netlify is a static website host and you can connect your repository to them. More than that, you can build each PR and get a preview website for free. This is for a gaming change because it speeds how you can do Design QA in your components.
+
+So imagine that you creating a pull request to add a component. You can create the PR and assign to other devs and you can submit the url to your designer, so he/she can take a look and review what you did. So, the designer doesn't need to pull your branch locally or use Git, or use the terminal.
+
+*SHOW PR https://github.com/leonardofaria/leozera-ui/pull/1*
+
+# 9
+
+That's said, building has a few tricks.
+
+The first one is paying attention in Webpack, especially because webpack 4 is close to be released and it is much faster.
+
+
+# 10
+
+The second tip here is using babel-preset-env instead babel-preset-es2015. The reason why is because you can filter the browsers targeted which can reduce your final bundle.
+
+
+# 11
+
+Publishing is very straightforward.
+
+You can host private repositories on NPM for 7 dollars a month. You can setup by yourself a npm registry however you still need to spend money in a server in AWS or in a different cloud solution so at the end of the day is probably faster using npm infrastructure.
+
+Also, you can use scoped packages to organize better your packages.
+
+# 12
+
+After surviving this process, you want to keep your library updated and safe.
+
+# 13
+
+First tip here is adding Node Security alerts in your repo. It will monitor your package.json file and report any package with security problems.
+
+# 14
+
+If you don't want to use this solution you can enable security alerts on your github repository settings, which will give you the same result.
+
+# 15
+
+If you want to keep up-to-date you can use services like dependencies.io or Greenkeeper. They will monitor your package.json files and create individual PRs everytime a package is released. This can be a quite annoying if you check updates daily but weekly monitoring can be helpful.
+
+# 16
+
+Well, that's is all that I have to say.
+
+I wrote a post a few days ago covering what I talked here with more details, so if you want to check the post, it is on my blog. I also built a sample library if you don't know how to start it and I am open questions.
