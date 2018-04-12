@@ -1,6 +1,6 @@
-# Thoughts on Component Libraries
+# Building a React Component Library
 
-Slides of my "Thoughts on Component Libraries" presentation at [React Vancouver](http://reactvancouver.com)
+Slides of my "Building a React Component Library" presentation at [Conf & Coffee 2018](https://www.conf.coffee/)
 
 - - -
 
